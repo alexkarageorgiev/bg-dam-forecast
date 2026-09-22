@@ -1,0 +1,23 @@
+# Secrets: the real API key lives here, never in git
+.env
+.env.*
+!.env.example
+
+# Python / Jupyter
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Forecast runs write here; only the README example is kept
+outputs/*
+!outputs/example_forecast.png
+
+# Working copy of the original notebook while it is being restructured
+notebooks/_source_model.ipynb
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

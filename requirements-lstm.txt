@@ -1,0 +1,3 @@
+# Optional: only the LSTM comparison in notebooks/02_model.ipynb needs TensorFlow (~500 MB).
+-r requirements.txt
+tensorflow==2.21.0

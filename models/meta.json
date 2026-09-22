@@ -1,0 +1,53 @@
+{
+  "trained_at": "2026-09-22T13:42:14",
+  "data_from": "2017-02-02",
+  "data_to": "2026-09-21",
+  "target_mode": "direct",
+  "features": [
+    "hour",
+    "dayofweek",
+    "month",
+    "is_weekend",
+    "is_holiday",
+    "price_lag_48h",
+    "price_lag_72h",
+    "price_lag_168h",
+    "price_roll_std_7d",
+    "price_roll_mean_30d",
+    "price_trend_7d_30d",
+    "load_ramp_1h",
+    "net_load_ramp_1h",
+    "net_load_ramp_3h",
+    "net_load_mw",
+    "load_fc_mw",
+    "solar_fc_mw",
+    "wind_onshore_fc_mw",
+    "temp_c",
+    "wind_speed_ms",
+    "radiation_wm2",
+    "cloud_cover_pct",
+    "ro_price_lag_48h",
+    "ro_price_lag_168h",
+    "gr_price_lag_48h",
+    "gas_ttf_lag_48h",
+    "gas_ttf_chg_1w"
+  ],
+  "holdout": {
+    "from": "2025-04-06",
+    "to": "2026-09-21",
+    "metrics": [
+      {
+        "model": "Seasonal naive (same hour last week)",
+        "MAE": 28.57123778370083,
+        "RMSE": 42.97467156781259,
+        "sMAPE_%": 44.31255061444948
+      },
+      {
+        "model": "LightGBM",
+        "MAE": 23.32101892470794,
+        "RMSE": 33.00931998690848,
+        "sMAPE_%": 36.657491217694734
+      }
+    ]
+  }
+}
